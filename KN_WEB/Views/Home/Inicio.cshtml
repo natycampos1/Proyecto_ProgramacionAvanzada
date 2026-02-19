@@ -1,5 +1,8 @@
 ﻿@{
     ViewBag.Title = "Inicio";
+   
+        Layout = "~/Views/Shared/_LayoutExterno.cshtml";
+    
 }
 
 <main class="container-fluid">
@@ -49,7 +52,7 @@
                                     </div>
 
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" href="#">Forgot Password?</a>
+                                        <a class="small" href="#">Olvidaste tu contraseña?</a>
 
                                         <!-- BOTÓN QUE ENVÍA EL FORM -->
                                         <button type="submit" class="btn btn-primary">
@@ -62,8 +65,8 @@
 
                             <div class="card-footer text-center py-3">
                                 <div class="small">
-                                    <a href="@Url.Action("Register", "Home")">
-                                        Need an account? Sign up!
+                                    <a href="@Url.Action("Login", "Home")">
+                                        Necesitas una cuenta? Registrate
                                     </a>
                                 </div>
                             </div>

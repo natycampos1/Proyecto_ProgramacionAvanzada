@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
 }
-
 
 <div class="row justify-content-center">
     <div class="col-lg-6 col-md-8 col-sm-12">
@@ -52,7 +52,7 @@
                 <div class="text-center mt-15">
                     <p class="text-sm">
                         ¿Ya tienes cuenta?
-                        <a href="login.html">Inicia sesión</a>
+                        <a href="@Url.Action("Inicio", "Home")">Inicia sesión</a>
                     </p>
                 </div>
 
