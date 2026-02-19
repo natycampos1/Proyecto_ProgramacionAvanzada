@@ -168,6 +168,7 @@
     <Content Include="Template\css\lineicons.css" />
     <Content Include="Template\css\main.css" />
     <Content Include="Template\css\materialdesignicons.min.css" />
+    <Content Include="Template\css\layout.css" />
     <Content Include="Template\css\styles.css" />
     <Content Include="Template\js\bootstrap.bundle.min.js" />
     <Content Include="Template\js\Chart.min.js" />
