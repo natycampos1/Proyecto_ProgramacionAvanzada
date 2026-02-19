@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Informacion";
+}
+
+@{
+    ViewBag.Title = "Información";
+}
+
+<div class="container mt-5">
+
+    <!-- Título principal -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">🚌 Pura Vida Buses</h1>
+        <p class="text-muted fs-5">
+            Transporte seguro, cómodo y confiable en Costa Rica
+        </p>
+    </div>
+
+    <!-- Tarjetas -->
+    <div class="row g-4">
+
+        <!-- Quiénes somos -->
+        <div class="col-md-4">
+            <div class="card shadow h-100 border-0">
+                <div class="card-body text-center">
+                    <h4 class="card-title text-success">¿Quiénes Somos?</h4>
+                    <p class="card-text">
+                        Somos una empresa dedicada al transporte público,
+                        comprometida con la puntualidad, seguridad y comodidad
+                        de nuestros pasajeros.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Misión -->
+        <div class="col-md-4">
+            <div class="card shadow h-100 border-0">
+                <div class="card-body text-center">
+                    <h4 class="card-title text-warning">Misión</h4>
+                    <p class="card-text">
+                        Brindar un servicio eficiente, accesible y moderno,
+                        garantizando una excelente experiencia de viaje.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visión -->
+        <div class="col-md-4">
+            <div class="card shadow h-100 border-0">
+                <div class="card-body text-center">
+                    <h4 class="card-title text-info">Visión</h4>
+                    <p class="card-text">
+                        Ser líderes en transporte público nacional,
+                        reconocidos por innovación y calidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sección servicios -->
+    <div class="mt-5 p-4 bg-light rounded shadow-sm">
+
+        <h3 class="text-center mb-4">Nuestros Servicios</h3>
+
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-3">
+                ✅ Rutas Nacionales
+            </div>
+
+            <div class="col-md-3 mb-3">
+                ⏱️ Puntualidad Garantizada
+            </div>
+
+            <div class="col-md-3 mb-3">
+                💺 Comodidad
+            </div>
+
+            <div class="col-md-3 mb-3">
+                🛡️ Seguridad
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Contacto -->
+    <div class="text-center mt-5">
+
+        <h4>Contáctanos</h4>
+
+        <p>
+            📞 Teléfono: 64205939<br/>
+            📧 Email: info@puravidabuses.cr <br />
+            📍 Costa Rica
+        </p>
+
+        <a href="@Url.Action("Index","Home")" class="btn btn-primary mt-3">
+            Volver al Inicio
+        </a>
+
+    </div>
+
+</div>
