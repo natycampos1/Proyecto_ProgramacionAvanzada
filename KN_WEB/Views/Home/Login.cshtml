@@ -1,4 +1,4 @@
-﻿@model KN_WEB.Models.LoginModel
+﻿@model KN_WEB.Models.UsuarioModel
 
 @{
     ViewBag.Title = "Login";
@@ -12,6 +12,14 @@
                 <div class="card-body">
 
                     <h5 class="card-title text-center mb-4">Iniciar Sesión</h5>
+
+                    <!-- 🔴 MENSAJE DE ERROR -->
+                    @if (ViewBag.Mensaje != null)
+                    {
+                        <div class="alert alert-danger text-center">
+                            @ViewBag.Mensaje
+                        </div>
+                    }
 
                     @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                     {

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace KN_WEB.Models
 {
-    public class LoginModel
+    public class UsuarioModel
     {
         [Required(ErrorMessage = "La identificación es obligatoria")]
         public string Identificacion { get; set; }
