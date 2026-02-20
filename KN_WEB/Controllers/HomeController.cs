@@ -27,14 +27,14 @@ namespace KN_WEB.Controllers
             return View();
         }
 
-        public ActionResult Inicio()
+        public ActionResult Login()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
 
-        public ActionResult Login()
+        public ActionResult Registro()
         {
             ViewBag.Message = "Your contact page.";
 

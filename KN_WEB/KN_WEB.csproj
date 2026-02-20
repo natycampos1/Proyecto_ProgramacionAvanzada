@@ -120,10 +120,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,14 +199,13 @@
     <Content Include="Template\fonts\lineicons.ttf" />
     <Content Include="Template\fonts\lineicons.woff" />
     <Content Include="Template\fonts\lineicons.woff2" />
+    <Content Include="Views\Home\Registro.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Inicio.cshtml" />
     <Content Include="Views\Home\Informacion.cshtml" />
     <Content Include="Views\Shared\_LayoutExterno.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Template\images\" />
   </ItemGroup>
   <ItemGroup>
