@@ -1,0 +1,52 @@
+/* ===== FONDO GENERAL (NO GRADIENTE RARO) ===== */
+.layout-bg {
+    margin: 0;
+    height: 100vh;
+    background-color: #f4f6f9; /* gris limpio profesional */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== CENTRAR TODO ===== */
+.layout-center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== LA CAJA REAL ===== */
+.layout-box {
+    width: 100%;
+    max-width: 420px; /* 🔴 ESTO EVITA QUE SE EXTIENDA */
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 12px;
+    /* sombra elegante */
+    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+    /* evita que bootstrap la estire */
+    flex: none;
+}
+
+    /* ===== TITULOS ===== */
+    .layout-box h3 {
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* ===== INPUTS ===== */
+    .layout-box .form-control {
+        border-radius: 8px;
+        height: 42px;
+    }
+
+    /* ===== BOTON ===== */
+    .layout-box .btn {
+        border-radius: 8px;
+        height: 42px;
+        font-weight: 500;
+    }
+
+    /* ===== LINKS ===== */
+    .layout-box a {
+        text-decoration: none;
+    }
