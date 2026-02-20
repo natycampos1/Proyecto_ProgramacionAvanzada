@@ -1,42 +1,68 @@
-﻿@model  KN_WEB.Models.LoginModel
-
-
+﻿@model KN_WEB.Models.LoginModel
 
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_LayoutExterno.cshtml";
 }
 
-<h3 class="text-center mb-3">Buses Pura Vida</h3>
-<h5 class="text-center text-muted mb-4">Iniciar Sesión</h5>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12 col-sm-12">
+            <div class="card shadow">
+                <div class="card-body">
 
-<form method="post" action="@Url.Action("Registro", "Home")">
+                    <h5 class="card-title text-center mb-4">Iniciar Sesión</h5>
 
-    <div class="mb-3">
-        <label class="form-label">Identificacion</label>
-        <input type="email" name="Identificacion" class="form-control" required>
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        <!-- Identificación -->
+                        <div class="mb-3">
+                            <label class="form-label">Identificación</label>
+                            @Html.TextBoxFor(m => m.Identificacion, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Ingrese su identificación"
+                            })
+                            @Html.ValidationMessageFor(m => m.Identificacion, "", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- Contraseña -->
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            @Html.PasswordFor(m => m.Contrasenna, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Ingrese su contraseña"
+                            })
+                            @Html.ValidationMessageFor(m => m.Contrasenna, "", new { @class = "text-danger" })
+                        </div>
+
+                        <!-- Recordarme -->
+                        <div class="form-check mb-3">
+                            @Html.CheckBoxFor(m => m.Remember, new { @class = "form-check-input" })
+                            <label class="form-check-label">Recordarme</label>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Ingresar
+                            </button>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+
+                        <div class="text-center mt-2">
+                            <a href="@Url.Action("Registro","Home")">
+                                ¿No tienes cuenta? Regístrate
+                            </a>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="mb-3">
-        <label class="form-label">Contraseña</label>
-        <input type="password" name="Contrasenna" class="form-control" required>
-    </div>
-
-    <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox" name="Remember">
-        <label class="form-check-label">Recordarme</label>
-    </div>
-
-    <button type="submit" class="btn btn-primary w-100">
-        Ingresar
-    </button>
-
-    <div class="text-center mt-3">
-        <a href="#">¿Olvidaste tu contraseña?</a>
-    </div>
-
-    <div class="text-center mt-2">
-        <a href="@Url.Action("Registro","Home")">¿No tienes cuenta? Regístrate</a>
-    </div>
-
-</form>
+</div>
