@@ -73,10 +73,14 @@ namespace KN_WEB.Controllers
         {
             return View();
         }
-
         [HttpPost]
-        public ActionResult Registro(UsuarioModel model)
+        public ActionResult Registro(UsuarioRegistroModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             using (var context = new KN_DBEntities())
             {
                 var result = context.RegistrarUsuario(
@@ -87,8 +91,8 @@ namespace KN_WEB.Controllers
 
                 if (result <= 0)
                 {
-                    ViewBag.Mensaje = "Su información no se registró correctamente.";
-                    return View();
+                    ViewBag.Mensaje = "No se pudo registrar el usuario.";
+                    return View(model);
                 }
 
                 return RedirectToAction("Login", "Home");
